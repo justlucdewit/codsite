@@ -1,13 +1,21 @@
-.green {
-    color: lightgreen;
+.circle {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: gray;
 }
 
-.yellow {
-    color: yellow;
+.circle.green {
+    background: lightgreen;
 }
 
-.red {
-    color: red;
+.circle.yellow {
+    background: yellow;
+}
+
+.circle.red {
+    background: red;
 }
 
 pre {
