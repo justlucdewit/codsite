@@ -1,0 +1,59 @@
+<div id="code-section">
+    <div id="code-section-wrapper">
+        <h2>Language</h2>
+        <h3>code examples</h3>
+
+        <br /><br /><br />
+        
+        <h4>Cod script that prints the text hello world to the screen</h4>
+        <div class="code-block">
+            <div class="code-block-header">
+                <div class="code-block-header-title">hello_world.cod</div>
+                <div class="code-block-header-buttons"><span class="green">⬤</span> <span class="yellow">⬤</span> <span class="red">⬤</span></div>
+            </div>
+            <div class="code-block-content">
+                <div class="code-nums">
+                    1<br />2<br />3<br />4<br />
+                </div>
+                <div class="code"><pre>
+<span class="keyword">include</span> <span class="string">"std/io.cod"</span>
+
+<span class="comment">-- Print hello world</span>
+<span class="string">"Hello World!"</span> <span class="keyword">prints</span>
+                </pre></div>
+            </div>
+        </div>
+
+        <h4>Cod script that prints heads or tails randomly</h4>
+        <div class="code-block">
+            <div class="code-block-header">
+                <div class="code-block-header-title">coin_flip.cod</div>
+                <div class="code-block-header-buttons"><span class="green">⬤</span> <span class="yellow">⬤</span> <span class="red">⬤</span></div>
+            </div>
+            <div class="code-block-content">
+                <div class="code-nums">
+                    1<br />2<br />3<br />4<br />5<br />6<br />7<br />8<br />9<br />10<br />11<br />12<br />13<br />14<br />15<br />16
+                </div>
+                <div class="code"><pre>
+<span class="keyword">include</span> <span class="string">"std/io.cod"</span>
+<span class="keyword">include</span> <span class="string">"std/stack.cod"</span>
+<span class="keyword">include</span> <span class="string">"std/math.cod"</span>
+
+<span class="comment">-- Get a random number and modulate it by 2</span>
+<span class="keyword">random</span> 2 %
+
+<span class="comment">-- If its heads</span>
+<span class="keyword">dup</span> 1 == <span class="keyword">if</span> {
+    <span class="string">"Heads"</span> <span class="keyword">prints</span>
+}
+
+<span class="comment">-- If its tails</span>
+<span class="keyword">dup</span> 1 != <span class="keyword">if</span> {
+    <span class="string">"Tails"</span> <span class="keyword">prints</span>
+}
+                </pre></div>
+            </div>
+        </div>
+
+    </div>
+</div>

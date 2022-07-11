@@ -1,0 +1,43 @@
+{
+    "input": "index.html",
+    "output": "output/output.html",
+    "components": "components",
+
+    "register": {
+        "header": {
+            "logo": "assets/cod_blue.png"
+        },
+        "poster": {
+            "posterImg": "assets/background.png",
+            "posterTitle": "COD Language",
+            "posterLogo": "assets/cod_white.png",
+            "btn1": "Download",
+            "btn2": "Documentation"
+        },
+        "cardsSection": {
+            "cardsSectionTitle": "Why COD?",
+            "cardsSectionSubtitle": "Cod is a concatinative stackbased language",
+            
+            "card1Image": "assets/card1.png",
+            "card1Title": "Concatinative",
+            "card1Txt": "Concativate programming languages are an untraditional pointer free programming paradigm with 'words' that denote functions that are called one by one.",
+            "card2Image": "assets/card2.png",
+            "card2Title": "Stack based",
+            "card2Txt": "COD primarily uses a stack based datastructure, a last in first out data structure. It combines this with a heap & variables to make the life of the programmer easier.",
+            "card3Image": "assets/card3.png",
+            "card3Title": "Open source",
+            "card3Txt": "The source code of the COD compiler and all its tools are opensource and can be read, modified, and redistributed in any way you like using its repository on Github."
+        },
+        "codeSection": {
+            
+        },
+        "footer": {
+            "footerText": ""
+        }
+    },
+
+    "options": {
+        "title": "COD",
+        "css": "style.css"
+    }
+}
