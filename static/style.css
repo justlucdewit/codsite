@@ -241,7 +241,6 @@ header img {
     padding-top: 10px;
 }
 
-/* Footer */
 .keyword {
     font-weight: bold;
     color: #e7e414;
@@ -254,4 +253,48 @@ header img {
 
 .comment {
     color: #7c7c7c;
+}
+
+/* Footer */
+body {
+    position: relative;
+    min-height: 100vh;
+}
+
+#footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #383838;
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 300;
+    color: #d9d9df;
+    justify-content: center;
+    width: 80vw;
+    padding: 50px 10vw;
+}
+
+#footer #left, #footer #right {
+    width: 40vw;
+    padding: 10px;
+}
+
+#footer #left {
+    padding: 20px;
+    font-size: large;
+}
+
+#footer #right a {
+    display: block;
+    color: #d9d9df;
+    text-decoration: none;
+    border-bottom: 1px solid #d9d9df;
+    margin-top: 20px;
+}
+
+#footer .title {
+    font-size: large;
+    font-weight: bold;
+    margin-bottom: 20px;
 }

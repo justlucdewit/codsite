@@ -38,11 +38,11 @@
             "card3Title": "Open source",
             "card3Txt": "The source code of the COD compiler and all its tools are opensource and can be read, modified, and redistributed in any way you like using its repository on Github."
         },
+        "footer": {
+            "footerText": "COD Language"
+        },
         "codeSection": {
             
-        },
-        "footer": {
-            "footerText": ""
         }
     },
 
