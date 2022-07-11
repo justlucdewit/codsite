@@ -306,3 +306,80 @@ body {
     font-weight: bold;
     margin-bottom: 20px;
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* On mobile flex direction column */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: 100px;
+    }
+
+    header img {
+        height: 30px;
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+
+    #navigator {
+        margin-bottom: 10px;
+    }
+
+    #poster-img {
+        padding-top: 100px;
+    }
+}
+
+#navigator {
+    margin-right: 50px;
+}
+
+#navigator a {
+    text-decoration: none;
+    color: #8e8e9c;
+    margin-right: 20px;
+    padding: 50px 0;
+}
+
+#navigator a:hover {
+    color: #2e9dff;
+}
+
+.render-md h1, .render-md h2, .render-md h3, .render-md h4, .render-md h5, .render-md h6, .render-md p {
+    margin: 10px 0; padding: 0;
+}
+
+.render-md h2 {
+    margin-top: 40px;
+}
+
+.render-md code {
+    background: #eee;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.render-md pre {
+    display: block;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 20px 0;
+    font-size: 10px;
+}
+
+.render-md pre code {
+    background: white;
+    padding: 0;
+    font-weight: normal;
+}
+
+.render-md {
+    text-align: left;
+    padding: 50px 50px 50px 50px;
+    width: 90%;
+}

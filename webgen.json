@@ -1,5 +1,5 @@
 {
-    "inputs": ["index.html", "download.html"],
+    "inputs": ["index.html", "download.html", "docs.html", "try-it.html"],
     "static": "static",
     "output": "output",
     "components": "components",
@@ -8,6 +8,7 @@
         "head": {
             "title": "COD",
             "css": "style.css",
+            "js": "script.js",
             "embedTitle": "COD Language",
             "embedDescription": "COD Concatenative Programming Language",
             "embedURL": "https://www.codlang.com",
@@ -42,9 +43,8 @@
         "footer": {
             "footerText": "COD Language"
         },
-        "codeSection": {
-            
-        }
+        "codeSection": {},
+        "docsMarkdown": {}
     },
 
     "options": {}

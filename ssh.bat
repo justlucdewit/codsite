@@ -1,0 +1,1 @@
+putty -ssh codlangcom@codlan.ssh.transip.me
