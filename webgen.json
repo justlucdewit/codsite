@@ -12,7 +12,8 @@
             "embedDescription": "COD Concatenative Programming Language",
             "embedURL": "https://www.codlang.com",
             "embedImage": "https://www.codlang.com/assets/logo.png",
-            "embedTheme": "#66b7ff"
+            "embedTheme": "#66b7ff",
+            "favicon": "assets/favicon.ico"
         },
         "header": {
             "logo": "assets/cod_blue.png"
