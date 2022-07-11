@@ -1,6 +1,6 @@
 import json
 import htmlmin
-from watchdog.observers import Observer
+import shutil
 
 def resolve_file(content, options, components):
     # Search for things like {{name}}
@@ -33,21 +33,33 @@ watermark = "<!-- website generated using webgen -->\n"
 # Read webgen.json and turn into dictionairy
 webgen_settings = json.load(open('webgen.json'))
 
+static_folder = webgen_settings['static']
+output_folder = webgen_settings['output']
+
+# Remove the contents of the output folder
+shutil.rmtree(output_folder, ignore_errors=True)
+
+# Create the output folder
+shutil.copytree(static_folder, output_folder)
+
 # Read the input file
-resulting_code = open(webgen_settings['input']).read()
+for input_file in webgen_settings['inputs']:
+    print(f"Processing {input_file}")
 
-# Get list of all available components in the component folder
-component_folder = webgen_settings['components']
+    resulting_code = open(input_file).read()
 
-# Get all the components
-components = webgen_settings['register']
+    # Get list of all available components in the component folder
+    component_folder = webgen_settings['components']
 
-resulting_code = resolve_file(resulting_code, webgen_settings['options'], components)
+    # Get all the components
+    components = webgen_settings['register']
 
-# Compress the output
-resulting_code = watermark + resulting_code
-# resulting_code = htmlmin.minify(resulting_code)
+    resulting_code = resolve_file(resulting_code, webgen_settings['options'], components)
 
-# Write to the output file
-output_file = open(webgen_settings['output'], 'w')
-output_file.write(resulting_code)
+    # Compress the output
+    resulting_code = watermark + resulting_code
+    # resulting_code = htmlmin.minify(resulting_code)
+
+    # Write to the output file
+    output_file = open(webgen_settings['output'] + "/" + input_file, 'w')
+    output_file.write(resulting_code)

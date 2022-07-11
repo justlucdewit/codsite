@@ -1,6 +1,7 @@
 {
-    "input": "index.html",
-    "output": "output/output.html",
+    "inputs": ["index.html", "download.html"],
+    "static": "static",
+    "output": "output",
     "components": "components",
 
     "register": {

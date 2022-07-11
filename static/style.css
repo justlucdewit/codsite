@@ -1,0 +1,257 @@
+.green {
+    color: lightgreen;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.red {
+    color: red;
+}
+
+pre {
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Fira Code', sans-serif;
+}
+
+/* Header */
+html, body {
+    background: white;
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    background: #fff;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    position: fixed;
+    width: 100vw;
+    box-shadow: 0px 5px 10px 2px rgba(10%, 10%, 10%, 0.5);
+}
+
+header img {
+    height: 30px;
+    margin-left: 100px;
+}
+
+/* Poster */
+#poster-img {
+    padding-top: 60px;
+    width: 100vw;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    border-bottom: 5px solid #66b7ff;
+}
+
+#poster-title {
+    color: white;
+    font-size: 60px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+#poster-logo {
+    height: 200px;
+}
+
+#poster-btn-1, #poster-btn-2 {
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 12px 30px;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+}
+
+#poster-btn-1 {
+    background-color: #66b7ff;
+    transition: background-color 300ms;
+}
+
+#poster-btn-1:hover {
+    background-color: #2e9dff;
+    outline: 0;
+}
+
+#poster-btn-2 {
+    background: transparent;
+    border: 1px solid white;
+    transition: background-color 300ms ease, border 300ms ease, color 300ms ease;
+}
+
+#poster-btn-2:hover {
+    border: 1px solid #2e9dff;
+    color: #2e9dff;
+}
+
+#poster h1 {
+    margin: 0;
+}
+
+/* Card section */
+#cardsSection {
+    margin: 100px 0;
+}
+
+#cardsSection h2 {
+    font-size: 30px;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+#cardsSection div {
+    color: #8e8e9c;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+#cards {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: inline-block;
+    padding: 15px;
+    border: 1px solid #dcebf7;
+    border-radius: 5px;
+    background-color: #fff;
+    text-align: center;
+    width: 300px;
+    margin: 10px;
+}
+
+.card-title {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #676770;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 300;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+}
+
+.card-txt {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 300;
+    text-align: left;
+}
+
+.card-img {
+    width: 50px;
+    background: #2e9dff;
+    border-radius: 100%;
+    padding: 10px;
+    border: 10px solid white;
+    box-shadow: 0 0 0 2px #2e9dff;
+    margin: 20px 0;
+}
+
+/* Code section */
+#code-section {
+    background: #dfdfdf;
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+}
+
+#code-section-wrapper h2 {
+    font-size: 30px;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+#code-section-wrapper h3 {
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+#code-section-wrapper h4 {
+    text-align: center;
+    font-weight: lighter;
+}
+
+.code-block {
+    color: white;
+    width: 500px;
+    margin-bottom: 80px;
+}
+
+.code-block-header {
+    display: grid;
+    grid-template-columns: auto 50px;
+    background-color: #161616;
+    padding: 10px;
+}
+
+.code-block-content {
+    background: #2e2e2e;
+}
+
+.code-nums {
+    color: #8e8e9c;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.code-block-content {
+    font-family: 'Fira Code', sans-serif;
+    font-size: 16px;
+    display: grid;
+    grid-template-columns: 50px auto;
+    padding-top: 10px;
+}
+
+/* Footer */
+.keyword {
+    font-weight: bold;
+    color: #e7e414;
+}
+
+.string {
+    font-weight: bold;
+    color: #47e67c;
+}
+
+.comment {
+    color: #7c7c7c;
+}
