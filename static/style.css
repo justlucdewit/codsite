@@ -268,6 +268,7 @@ header img {
 body {
     position: relative;
     min-height: 100vh;
+    display: grid;
 }
 
 #footer {
@@ -460,5 +461,35 @@ table button:hover {
     
     table img {
         height: 20px;
+    }
+
+    #navigator {
+        text-align: center;
+        margin-right: 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    header {
+        height: 180px;
+    }
+
+    header a {
+        display: block;
+        padding: 0 !important;
+        margin-bottom: 5px;
+    }
+
+    #poster-title {
+        font-size: 30px;
+    }
+
+    #poster-img {
+        margin-top: 180px;
+    }
+
+    #poster-btn-1 {
+        display: block;
+        margin-bottom: 10px;
     }
 }
