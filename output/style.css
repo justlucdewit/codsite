@@ -109,6 +109,7 @@ header img {
 #poster-btn-2:hover {
     border: 1px solid #2e9dff;
     color: #2e9dff;
+    cursor: pointer;
 }
 
 #poster h1 {
@@ -307,6 +308,14 @@ body {
     margin-bottom: 20px;
 }
 
+/* Sponsor */
+#sponsor {
+    position: fixed;
+    bottom: 10px;
+    right: -10px;
+    transform: scale(0.8);
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -383,4 +392,59 @@ header {
     text-align: left;
     padding: 50px 50px 50px 50px;
     width: 90%;
+}
+
+table {
+    width: calc(100% - 40px);
+    border-spacing: 0;
+    margin: 0 20px;
+}
+
+table thead {
+    background: #2e9dff;
+    color: white;
+    font-weight: bold;   
+}
+
+table tbody tr {
+    height: 60px;
+}
+
+table tbody tr:nth-child(even) {
+    background: #f0f6fc;
+}
+
+table tbody tr:nth-child(odd) {
+    background: #c8e3fa;
+}
+
+table thead th {
+    padding: 20px;
+}
+
+table tbody td.disabled button {
+    background: #c4c4c4;
+    cursor: not-allowed;
+}
+
+table img {
+    height: 40px;
+}
+
+table button {
+    border-radius: 0;
+    border: none;
+    background: #6dbbff;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+}
+
+table button:hover {
+    cursor: pointer;
+    background: #2e9dff;
+}
+
+#downloads-table-content {
+    text-align: center;
 }
