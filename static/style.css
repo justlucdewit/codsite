@@ -307,6 +307,14 @@ body {
     margin-bottom: 20px;
 }
 
+/* Sponsor */
+#sponsor {
+    position: fixed;
+    bottom: 10px;
+    right: -10px;
+    transform: scale(0.8);
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -385,4 +393,5 @@ header {
     width: 90%;
 }
 
+/* Download page */
 /* Download page */

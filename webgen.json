@@ -19,6 +19,9 @@
         "header": {
             "logo": "assets/cod_blue.png"
         },
+        "sponsor": {
+            
+        },
         "poster": {
             "posterImg": "assets/background.png",
             "posterTitle": "COD Language",
