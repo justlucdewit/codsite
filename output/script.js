@@ -3,7 +3,6 @@ const markdowns = document.getElementsByClassName("render-md");
 const md = new markdownit();
 
 [...markdowns].forEach(markdown => {
-    console.log(markdown.innerHTML)
     const mdres = md.render(markdown.innerHTML.replace(/\&gt\;/g, ">"));
     markdown.innerHTML = mdres;
 });
@@ -25,10 +24,17 @@ const downloadTemplate = `
     </td>
 </tr>`
 
+const goToDocs = () => {
+    window.location = "./docs.html";
+}
+
 const versions = ['v1.0.0'];
 
-for (const version of versions) {
-    const downloadTable = document.getElementById('downloads-table-content');
-    downloadTable.innerHTML += downloadTemplate
-        .replace(/\{0\}/g, version);
+const downloadTable = document.getElementById('downloads-table-content');
+
+if (downloadTable !== null) {
+    for (const version of versions) {
+        downloadTable.innerHTML += downloadTemplate
+            .replace(/\{0\}/g, version);
+    }
 }

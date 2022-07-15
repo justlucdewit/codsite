@@ -448,3 +448,17 @@ table button:hover {
 #downloads-table-content {
     text-align: center;
 }
+
+@media screen and (max-width: 768px) {
+    #footer {
+        grid-template-columns: 1fr;
+    }
+
+    #footer #left, #footer #right {
+        width: calc(100% - 40px);
+    }
+    
+    table img {
+        height: 20px;
+    }
+}
