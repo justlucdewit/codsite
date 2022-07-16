@@ -38,3 +38,7 @@ if (downloadTable !== null) {
             .replace(/\{0\}/g, version);
     }
 }
+
+const compile = () => {
+    alert('Compilation does not work yet');
+}
