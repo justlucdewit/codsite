@@ -1,5 +1,5 @@
 <?php
-    // api.codlang.com/compile
+    // POST: api.codlang.com/compile
     
     // Open the API end point to anyone
     header("Access-Control-Allow-Origin: *");
@@ -10,5 +10,5 @@
     $process_uuid = uniqid('', true);
 
     // Test result
-    var_dump($_POST);
+    var_dump($_POST["code"]);
 ?>
