@@ -16,5 +16,5 @@
     fclose($file);
 
     // Test result
-    echo $code;
+    // echo $code;
 ?>
