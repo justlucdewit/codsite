@@ -10,5 +10,5 @@
     $process_uuid = uniqid('', true);
 
     // Test result
-    echo $process_uuid;
+    var_dump($_POST);
 ?>

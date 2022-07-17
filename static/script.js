@@ -51,9 +51,8 @@ const compile = async () => {
         method: "POST",
         body: data
     }))
-
     
-    console.log(response)
+    console.log(await response.text())
 
     alert('Compilation does not work yet');
 }
