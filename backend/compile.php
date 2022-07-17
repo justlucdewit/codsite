@@ -1,6 +1,10 @@
 <?php
     // POST: api.codlang.com/compile
     
+    // Enable errors
+    error_reporting(E_ALL);
+    ini_set('display_errors', 'on');
+
     // Open the API end point to anyone
     header("Access-Control-Allow-Origin: *");
     header("Access-Control-Allow-Methods: *");
@@ -16,5 +20,5 @@
     fclose($file);
 
     // Test result
-    // echo $code;
+    echo $code;
 ?>
