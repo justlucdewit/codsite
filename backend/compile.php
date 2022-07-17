@@ -8,7 +8,13 @@
 
     // Generate a random UUID
     $process_uuid = uniqid('', true);
+    $code = $_POST["code"];
+
+    // Write the code to a temporary file in processes/{uuid}.cod
+    $file = fopen("processes/$process_uuid.cod", "w");
+    fwrite($file, $code);
+    fclose($file);
 
     // Test result
-    var_dump($_POST["code"]);
+    echo $code;
 ?>
