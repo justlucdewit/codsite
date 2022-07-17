@@ -6,6 +6,9 @@
     header("Access-Control-Allow-Methods: *");
     header("Access-Control-Allow-Headers: *");
 
+    // Generate a random UUID
+    $process_uuid = uniqid('', true);
+
     // Test result
-    echo "test";
+    echo $process_uuid;
 ?>

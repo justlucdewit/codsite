@@ -39,6 +39,21 @@ if (downloadTable !== null) {
     }
 }
 
-const compile = () => {
+const APIURL = "api.codlang.com"
+
+const compile = async () => {
+    // Do post request ot /compile.php
+    const code = document.getElementById("editor").value;
+    const data = new FormData();
+    data.append("code", code);
+    console.log(code)
+    const response = await (fetch(`https://${APIURL}/compile.php`, {
+        method: "POST",
+        body: data
+    }))
+
+    
+    console.log(response)
+
     alert('Compilation does not work yet');
 }
