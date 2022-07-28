@@ -17,6 +17,7 @@
     $process_uuid = uniqid('', true);
     $code = $_POST["code"];
     $success = false;
+    $compilerOutput = "";
 
     // Write the code to a temporary file in processes/{uuid}.cod
     // create file if not exist
@@ -24,33 +25,31 @@
     fwrite($file, $code);
     fclose($file);
 
-    // Compile the file using the cod compiler
-    $is_on_windows = PHP_OS_FAMILY === "Windows";
-    $executable_name = $is_on_windows ? "{$process_uuid}" : "{$process_uuid}";
-
     // Compile
-    shell_exec("cod processes/{$process_uuid}.cod -o processes/{$executable_name} -d");
+    shell_exec("cod processes/{$process_uuid}.cod -o processes/{$process_uuid} -d");
 
     // Check if the file exists
-    if (file_exists("processes/{$executable_name}")) {
+    if (file_exists("processes/{$process_uuid}")) {
         $success = true;
 
         // Get the contents of the file
+        $file = fopen("processes/{$process_uuid}.c", "r");
+        $compilerOutput = fread($file, filesize("processes/{$process_uuid}.c"));
+
+        // Replace all "%llu" with "%lu" in compiler output
+        $compilerOutput = str_replace("\"%llu\"", "\"%lu\"", $compilerOutput);
 
         // Delete the file
-        unlink("processes/{$executable_name}");
+        unlink("processes/{$process_uuid}");
+        unlink("processes/{$process_uuid}.cod");
+        unlink("processes/{$process_uuid}.c");
+        unlink("processes/{$process_uuid}.ast.json");
     }
     
-    
-    // Remove the temporary file
-    unlink("processes/{$process_uuid}.cod");
-    
-    // Return the output
-    echo json_encode(array("output" => $output));
-
     // Test result
     echo json_encode([
         "process_id" => $process_uuid,
-        "success" => $success
+        "success" => $success,
+        "compilerOutput" => $compilerOutput
     ])
 ?>

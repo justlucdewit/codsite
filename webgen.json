@@ -1,5 +1,6 @@
 {
     "inputs": ["index.html", "download.html", "docs.html", "try-it.html"],
+    "version": "1.2.0",
     "static": "static",
     "output": "output",
     "components": "components",
