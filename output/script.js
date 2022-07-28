@@ -39,7 +39,7 @@ if (downloadTable !== null) {
     }
 }
 
-const APIURL = "api.codlang.com/compile.php"
+const APIURL = "https://api.codlang.com/compile.php"
 
 const compile = async () => {
     // Do post request ot /compile.php
