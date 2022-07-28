@@ -39,7 +39,7 @@ if (downloadTable !== null) {
     }
 }
 
-const APIURL = "localhost:2000"
+const APIURL = "api.codlang.com/compile.php"
 
 const compile = async () => {
     // Do post request ot /compile.php
@@ -47,8 +47,7 @@ const compile = async () => {
     const output = document.getElementById("output");
     const data = new FormData();
     data.append("code", code);
-    console.log(code)
-    const response = await (await (fetch(`./compile.php`, {
+    const response = await (await (fetch(APIURL, {
         method: "POST",
         body: data
     }))).json();
@@ -76,7 +75,6 @@ const compile = async () => {
             "mode": "cors"
         });
 
-        console.log(response.compilerOutput)
         const codeXResponseJson = await codeXResponse.json();
 
         output.innerHTML  = `<span>${codeXResponseJson.output.replace(/\n/g, '<br />')}</span>`;
