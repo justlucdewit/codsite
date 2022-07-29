@@ -28,7 +28,7 @@ const goToDocs = () => {
     window.location = "./docs.html";
 }
 
-const versions = ['v1.0.0'];
+const versions = ['v1.1.0', 'v1.0.0'];
 
 const downloadTable = document.getElementById('downloads-table-content');
 
