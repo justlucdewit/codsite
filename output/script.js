@@ -16,8 +16,8 @@ const downloadTemplate = `
     <td>
         <button onclick="window.open('https://github.com/justlucdewit/cod/releases/download/{0}/cod.exe','_blank')">Download</button>
     </td>
-    <td class="disabled">
-        <button>Download</button>
+    <td>
+        <button onclick="window.open('https://github.com/justlucdewit/cod/releases/download/{0}/cod','_blank')">Download</button>
     </td>
     <td class="disabled">
         <button>Download</button>
