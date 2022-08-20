@@ -33,12 +33,15 @@
 </header>
 
 
-        <div style="display: inline-block; width: 20px; height: 100px;"></div>
+        <div class="editor-spacer" style="display: inline-block; width: 20px; height: 100px;"></div>
+        
+        <div>
+            <button id="run-button" onclick="compile()">Run</button> &nbsp;&nbsp; More code examples <a href="https://github.com/justlucdewit/cod/tree/master/examples" target="_blank">here</a>
+        </div>
+        
 
-        <button id="run-button" onclick="compile()">Run</button>
-
-        <div style="margin: 20px; column-gap: 20px; display: grid; grid-template-columns: 1fr 1fr; text-align: center; height: 50vh;">
-            <textarea id="editor" autocomplete="off">
+        <div class="editor-double-section" style="margin: 20px; column-gap: 20px; display: grid; grid-template-columns: 1fr 1fr; text-align: center; height: 50vh;">
+            <textarea autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" id="editor" autocomplete="off">
 include "std/io.cod"
 
 "Hello World!" prints
@@ -48,7 +51,7 @@ include "std/io.cod"
         <div id="footer">
     <div id="left">
         <div class="title">
-            about COD
+            About COD
         </div>
         <div id="about">
             COD is a stack based concatinative programming language, It has an untraditional paradigm yet uses abstraction and other features to try to be as practical as possible.
@@ -58,7 +61,7 @@ include "std/io.cod"
     </div>
     <div id="right">
         <div class="title">
-            useful links
+            Useful links
         </div>
 
         <a href="https://github.com/justlucdewit/cod">Github Repo</a>

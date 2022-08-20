@@ -27,10 +27,10 @@
     fclose($file);
 
     // Compile
-    shell_exec("cod processes/{$process_uuid}.cod -o processes/{$process_uuid} -d");
+    shell_exec("cod processes/{$process_uuid}.cod -o processes/{$process_uuid}");
 
     // Check if the file exists
-    if (file_exists("processes/{$process_uuid}")) {
+    if (file_exists("processes/{$process_uuid}.c")) {
         $success = true;
 
         // Get the contents of the file
@@ -41,10 +41,8 @@
         $compilerOutput = str_replace("\"%llu\"", "\"%lu\"", $compilerOutput);
 
         // Delete the file
-        unlink("processes/{$process_uuid}");
         unlink("processes/{$process_uuid}.cod");
         unlink("processes/{$process_uuid}.c");
-        unlink("processes/{$process_uuid}.ast.json");
     }
     
     // Test result

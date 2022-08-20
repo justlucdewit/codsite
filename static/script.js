@@ -39,7 +39,12 @@ if (downloadTable !== null) {
     }
 }
 
-const APIURL = "https://api.codlang.com/compile.php"
+
+
+const LOCAL = false;
+const APIURL = LOCAL
+    ? "http://localhost:80/compile.php"
+    : "https://api.codlang.com/compile.php";
 
 const compile = async () => {
     // Do post request ot /compile.php

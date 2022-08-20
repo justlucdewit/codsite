@@ -492,6 +492,19 @@ table button:hover {
         display: block;
         margin-bottom: 10px;
     }
+
+    .editor-double-section {
+        grid-template-columns: 1fr !important;
+    }
+
+    #output {
+        margin-right: 0 !important;
+        margin-top: 20px;
+    }
+
+    .editor-spacer {
+        height: 200px !important;
+    }
 }
 
 #editor {
@@ -522,6 +535,7 @@ table button:hover {
     cursor: pointer;
     width: 100px;
     margin-left: 20px;
+    display: inline;
 }
 
 #run-button:hover {
