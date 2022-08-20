@@ -27,7 +27,9 @@
     fclose($file);
 
     // Compile
-    shell_exec("cod processes/{$process_uuid}.cod -o processes/{$process_uuid}");
+    $isOnWindows = strtoupper(substr(PHP_OS, 0, 3)) === 'WIN';
+    $cmd = $isOnWindows ? "cod" : "./cod";
+    shell_exec($cmd . " processes/{$process_uuid}.cod -o processes/{$process_uuid}");
 
     // Check if the file exists
     if (file_exists("processes/{$process_uuid}.c")) {
